@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaVirtual.Repositor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaVirtual.Services", "BibliotecaVirtual.Services\BibliotecaVirtual.Services.csproj", "{2A315620-6683-44E1-8D9E-4DBE5F0A1F72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaVirtual.Common", "BibliotecaVirtual.Common\BibliotecaVirtual.Common.csproj", "{4CBAAFE6-9547-4454-8248-A461F3B8B401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2A315620-6683-44E1-8D9E-4DBE5F0A1F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A315620-6683-44E1-8D9E-4DBE5F0A1F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A315620-6683-44E1-8D9E-4DBE5F0A1F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CBAAFE6-9547-4454-8248-A461F3B8B401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CBAAFE6-9547-4454-8248-A461F3B8B401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CBAAFE6-9547-4454-8248-A461F3B8B401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CBAAFE6-9547-4454-8248-A461F3B8B401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
