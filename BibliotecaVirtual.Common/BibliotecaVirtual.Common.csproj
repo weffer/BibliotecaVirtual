@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8FAAD2BA-1A32-44C8-97FD-4C377E401B9B}</ProjectGuid>
+    <ProjectGuid>{3F0C44B7-A1C3-4985-A950-AE9A7E1301D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BibliotecaVirtual.AutoMapper</RootNamespace>
-    <AssemblyName>BibliotecaVirtual.AutoMapper</AssemblyName>
+    <RootNamespace>BibliotecaVirtual.Common</RootNamespace>
+    <AssemblyName>BibliotecaVirtual.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -42,16 +42,6 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BibliotecaVirtual.Common\BibliotecaVirtual.Common.csproj">
-      <Project>{3f0c44b7-a1c3-4985-a950-ae9a7e1301d5}</Project>
-      <Name>BibliotecaVirtual.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BibliotecaVirtual.Dominio\BibliotecaVirtual.Dominio.csproj">
-      <Project>{184bd145-72f1-4f73-a20f-b5be61e08183}</Project>
-      <Name>BibliotecaVirtual.Dominio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

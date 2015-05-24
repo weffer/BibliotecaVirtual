@@ -271,6 +271,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BibliotecaVirtual.AutoMapper\BibliotecaVirtual.AutoMapper.csproj">
+      <Project>{8faad2ba-1a32-44c8-97fd-4c377e401b9b}</Project>
+      <Name>BibliotecaVirtual.AutoMapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BibliotecaVirtual.Repository\BibliotecaVirtual.Repository.csproj">
       <Project>{4a130d3d-35fb-405e-8c46-6f141712c1be}</Project>
       <Name>BibliotecaVirtual.Repository</Name>
