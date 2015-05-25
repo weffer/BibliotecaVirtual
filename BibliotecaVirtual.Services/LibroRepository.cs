@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BibliotecaVirtual.Repository;
 using BibliotecaVirtual.Dominio;
-using BibliotecaVirtual.Common;
+using BibliotecaVirtual.Common.Libro;
+
 
 namespace BibliotecaVirtual.Services
 {
@@ -24,7 +25,7 @@ namespace BibliotecaVirtual.Services
             _libroRepository = null;
         }
 
-        public void Create(LibroCreateViewModel LibroCreateViewModel) 
+        public void Create(LibroCreateViewModel model) 
         {
 
         }

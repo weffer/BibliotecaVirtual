@@ -28,7 +28,7 @@
                     }
                     @if (Request.IsAuthenticated && User.IsInRole("Cliente"))
                     {
-                        <li>@Html.ActionLink("My Playlist", "Index", "PlayList")</li>
+                        <li>@Html.ActionLink("Reserva", "Index", "PlayList")</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

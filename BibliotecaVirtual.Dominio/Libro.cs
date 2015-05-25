@@ -10,6 +10,7 @@ namespace BibliotecaVirtual.Dominio
         public string nombre_autor { get; set; }
         public string genero { get; set; }
         public Categoria categoria { get; set; }
+        public int Cantidad { get; set; }
         public int categoriaid { get; set; }
     }
 }
