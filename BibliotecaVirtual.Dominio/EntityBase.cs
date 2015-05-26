@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaVirtual.Dominio
 {
-    public abstract class EntityBase
+    public class EntityBase
     {
         public int Id { get; set; }
     }

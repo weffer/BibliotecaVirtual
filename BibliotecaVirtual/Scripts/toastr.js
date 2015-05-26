@@ -30,7 +30,7 @@
                 error: error,
                 getContainer: getContainer,
                 info: info,
-                options: {},
+                options: {progressBar:true},
                 subscribe: subscribe,
                 success: success,
                 version: '2.1.1',

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using BibliotecaVirtual.Common.Libro;
+using BibliotecaVirtual.Dominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +20,8 @@ namespace BibliotecaVirtual.AutoMapper
 
         protected override void Configure()
         {
-          
+            Mapper.CreateMap<Libro, LibroCreateViewModel>();
+            Mapper.CreateMap<Libro, LibroListViewModel>();
         }
     }
 }

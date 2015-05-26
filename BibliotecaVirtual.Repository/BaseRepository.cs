@@ -25,10 +25,10 @@ namespace BibliotecaVirtual.Repository
             return Context.Set<TEntity>().AsQueryable();
         }
 
-        public void Create(TEntity entity)
+        public int Add(TEntity entity)
         {
             Context.Set<TEntity>().Add(entity);
-            Context.SaveChanges();
+            return Context.SaveChanges();
         }
 
         public void Update(TEntity entity)
@@ -37,9 +37,26 @@ namespace BibliotecaVirtual.Repository
             Context.SaveChanges();
         }
 
+        public IEnumerable<TEntity> GetAll()
+        {
+            return Context.Set<TEntity>().ToList<TEntity>().AsEnumerable();
+        }
+
+        public int Remove(TEntity entity)
+        {
+            Context.Set<TEntity>().Remove(entity);
+            return Context.SaveChanges();      
+        }
+
         public void Dispose()
         {
             Context = null;
+        }
+
+
+        public TEntity GetById(int Id)
+        {
+            return Context.Set<TEntity>().Find(Id);
         }
     }
 }

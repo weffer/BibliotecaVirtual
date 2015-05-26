@@ -1,0 +1,100 @@
+﻿@model IEnumerable<BibliotecaVirtual.Common.Libro.LibroListViewModel>
+
+@{
+    ViewBag.Title = "Libros";
+}
+
+<h2>Mantenimiento de Libros</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre_autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.genero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Detalle", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script type="text/javascript">
+    $(function () {
+        @if (TempData.ContainsKey("LibroCreateSuccess"))
+         {
+             <text>
+        $(function () {
+            toastr.success('@TempData["LibroCreateSuccess"]');
+            @{TempData.Remove("LibroCreateSuccess");}
+        })
+        </text>
+         }
+        else if (TempData.ContainsKey("LibroCreateError"))
+         {
+            <text>
+        $(function () {
+            toastr.error('@TempData["LibroCreateError"]');
+            @{TempData.Remove("LibroCreateError");}
+        })
+        </text>
+         }
+        else if (TempData.ContainsKey("LibroDeleteSuccess"))
+        {
+            <text>
+        $(function () {
+            toastr.success('@TempData["LibroDeleteSuccess"]');
+            @{TempData.Remove("LibroDeleteSuccess");}
+        })
+            </text>
+        }
+        else if (TempData.ContainsKey("LibroDeleteError"))
+        {
+            <text>
+            $(function () {
+                toastr.error('@TempData["LibroDeleteError"]');
+                @{TempData.Remove("LibroDeleteError");}
+            })
+            </text>
+        }
+
+    })
+</script>

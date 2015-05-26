@@ -11,7 +11,11 @@ namespace BibliotecaVirtual.Repository
         where TEntity : EntityBase
     {
         IQueryable<TEntity> Get();
-        void Create(TEntity entity);
+        int Add(TEntity entity);
         void Update(TEntity entity);
+        IEnumerable<TEntity> GetAll();
+        int Remove(TEntity entity);
+        TEntity GetById(int Id);
+       
     }
 }

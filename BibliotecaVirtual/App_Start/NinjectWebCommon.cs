@@ -19,7 +19,7 @@ namespace BibliotecaVirtual.App_Start
     using Ninject.Web.Common;
     using BibliotecaVirtual.Repository;
     using IdentitySample.Models;
-    
+    using Ninject.Extensions.Conventions;
 
     public static class NinjectWebCommon 
     {
@@ -54,6 +54,14 @@ namespace BibliotecaVirtual.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+
+                kernel.Bind(
+                    o => o.FromAssemblyContaining<LibroRepository>()
+                        .SelectAllClasses()
+                        .WhichAreNotGeneric()
+                        .InheritedFrom(typeof(IRepository<>))
+                        .BindAllInterfaces()
+                    );
 
                 kernel.Bind<BibliotecaVirtualContext>().ToSelf().InRequestScope();
                 //Configuracion para Identity
