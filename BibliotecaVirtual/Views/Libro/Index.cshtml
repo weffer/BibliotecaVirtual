@@ -95,6 +95,24 @@
             })
             </text>
         }
+        else if (TempData.ContainsKey("LibroEditSuccess"))
+        {
+            <text>
+            $(function () {
+                toastr.success('@TempData["LibroEditSuccess"]');
+                @{TempData.Remove("LibroEditSuccess");}
+            })
+            </text>
+        }
+        else if (TempData.ContainsKey("LibroEditError"))
+        {
+            <text>
+            $(function () {
+                toastr.error('@TempData["LibroEditError"]');
+                @{TempData.Remove("LibroEditError");}
+            })
+            </text>
+        }
 
     })
 </script>

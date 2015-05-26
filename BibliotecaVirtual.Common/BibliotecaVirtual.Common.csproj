@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Libro\LibroCreateViewModel.cs" />
+    <Compile Include="Libro\LibroDetailViewModel.cs" />
+    <Compile Include="Libro\LibroEditViewModel.cs" />
     <Compile Include="Libro\LibroListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

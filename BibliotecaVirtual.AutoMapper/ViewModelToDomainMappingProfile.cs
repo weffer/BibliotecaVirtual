@@ -22,6 +22,8 @@ namespace BibliotecaVirtual.AutoMapper
         {
             Mapper.CreateMap<Libro, LibroCreateViewModel>();
             Mapper.CreateMap<Libro, LibroListViewModel>();
+            Mapper.CreateMap<Libro, LibroEditViewModel>();
+            Mapper.CreateMap<Libro, LibroDetailViewModel>();
         }
     }
 }

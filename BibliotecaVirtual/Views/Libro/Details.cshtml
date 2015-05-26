@@ -1,0 +1,66 @@
+﻿@model BibliotecaVirtual.Common.Libro.LibroDetailViewModel
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>Detalle del Libro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoriaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoriaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id  }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

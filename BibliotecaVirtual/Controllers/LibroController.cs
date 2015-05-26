@@ -53,5 +53,27 @@ namespace BibliotecaVirtual.Controllers
             return RedirectToAction("index");
         }
 
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            LibroEditViewModel _LibroEditViewModel = _LibroService.GetById(id);
+            return View(_LibroEditViewModel);
+        }
+
+        public ActionResult Edit(LibroEditViewModel model)
+        {
+            if (_LibroService.Edit(model) > 0)
+                TempData["LibroEditSuccess"] = "Se Actualizo Correctamente";
+            else
+                TempData["LibroEditError"] = "No se Actualizo";
+
+            return RedirectToAction("index");
+        }
+
+        public ActionResult Details(int id)
+        {
+            LibroDetailViewModel _LibroDetailViewModel = _LibroService.GetDetail(id);
+            return View(_LibroDetailViewModel);
+        }
     }
 }

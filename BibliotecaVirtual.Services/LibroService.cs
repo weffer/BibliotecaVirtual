@@ -40,5 +40,21 @@ namespace BibliotecaVirtual.Services
         {
             return _libroRepository.Remove(_libroRepository.GetById(id));            
         }
+
+        public LibroEditViewModel GetById(int id)
+        {
+            return Mapper.Map<Libro, LibroEditViewModel>(_libroRepository.GetById(id));
+        }
+
+        public LibroDetailViewModel GetDetail(int id)
+        {
+            return Mapper.Map<Libro, LibroDetailViewModel>(_libroRepository.GetById(id));
+        }
+
+
+        public int Edit(LibroEditViewModel model)
+        {
+            return _libroRepository.Update(Mapper.Map<LibroEditViewModel, Libro>(model));
+        }
     }
 }

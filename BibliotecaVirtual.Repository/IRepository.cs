@@ -12,7 +12,7 @@ namespace BibliotecaVirtual.Repository
     {
         IQueryable<TEntity> Get();
         int Add(TEntity entity);
-        void Update(TEntity entity);
+        int Update(TEntity entity);
         IEnumerable<TEntity> GetAll();
         int Remove(TEntity entity);
         TEntity GetById(int Id);

@@ -31,10 +31,10 @@ namespace BibliotecaVirtual.Repository
             return Context.SaveChanges();
         }
 
-        public void Update(TEntity entity)
+        public int Update(TEntity entity)
         {
             Context.Entry(entity).State = EntityState.Modified;
-            Context.SaveChanges();
+            return Context.SaveChanges();
         }
 
         public IEnumerable<TEntity> GetAll()

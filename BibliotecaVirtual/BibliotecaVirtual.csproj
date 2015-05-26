@@ -1054,6 +1054,8 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Libro\Create.cshtml" />
     <Content Include="Views\Libro\Index.cshtml" />
+    <Content Include="Views\Libro\Edit.cshtml" />
+    <Content Include="Views\Libro\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
