@@ -7,6 +7,7 @@ using BibliotecaVirtual.Repository;
 using BibliotecaVirtual.Dominio;
 using BibliotecaVirtual.Common.Libro;
 using AutoMapper;
+using BibliotecaVirtual.Common.Categoria;
 
 
 namespace BibliotecaVirtual.Services
@@ -15,15 +16,22 @@ namespace BibliotecaVirtual.Services
     {
 
         public IRepository<Libro> _libroRepository;
+        public IRepository<Categoria> _categoriaRepository;
 
-        public LibroService(IRepository<Libro> _libroRepository)
+        public LibroService(IRepository<Libro> _libroRepository, IRepository<Categoria> _categoriaRepository)
         {
             this._libroRepository = _libroRepository;
+            this._categoriaRepository = _categoriaRepository;
         }
 
         public void Dispose()
         {
             _libroRepository = null;
+        }
+
+        public IEnumerable<CategoriaListViewModel> GetAllCategoria()
+        {
+            return Mapper.Map<IEnumerable<Categoria>, IEnumerable<CategoriaListViewModel>>(_categoriaRepository.GetAll());
         }
 
         public int Create(LibroCreateViewModel model) 

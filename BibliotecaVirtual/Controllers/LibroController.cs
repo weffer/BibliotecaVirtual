@@ -27,13 +27,30 @@ namespace BibliotecaVirtual.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            LibroCreateViewModel model = new LibroCreateViewModel();
+            model.categorias = _LibroService.GetAllCategoria();
+            return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(LibroCreateViewModel model)
         {
+            if (model.file.ContentLength > (2 * 1024 * 1024))
+            {
+                return View();
+            }
+
+            if (!(model.file.ContentType == "image/jpeg" || model.file.ContentType == "image/gif"))
+            {
+                return View();
+            }
+
+            byte[] data = new byte[model.file.ContentLength];
+            model.file.InputStream.Read(data, 0, model.file.ContentLength);
+            model.img = data;
+            model.categoriaid = model.categoria.Id;
+            
             if (_LibroService.Create(model) > 0)
                 TempData["LibroCreateSuccess"] = "Se Registro Correctamente";
             else

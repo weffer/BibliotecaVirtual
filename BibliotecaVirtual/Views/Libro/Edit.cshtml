@@ -1,18 +1,17 @@
 ﻿@model BibliotecaVirtual.Common.Libro.LibroEditViewModel
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar Libro";
 }
 
-<h2>Edit</h2>
+<h2>Editar Libro</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>LibroEditViewModel</h4>
+    <div class="form-horizontal">        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)

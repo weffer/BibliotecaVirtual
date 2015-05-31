@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BibliotecaVirtual.Common.Categoria;
+using System.Web;
 
 namespace BibliotecaVirtual.Common.Libro
 {
@@ -25,13 +23,20 @@ namespace BibliotecaVirtual.Common.Libro
         [Required(ErrorMessage = "El genero es Requerido")]
         [Display(Name = "Genero")]        
         public string genero { get; set; }
-
-        [Required(ErrorMessage = "La Categoria es Requerido")]
-        [Display(Name = "Categoria")]        
+      
         public int categoriaid { get; set; }
 
         [Required(ErrorMessage = "La Cantidad es Requerido")]
         [Display(Name = "Cantidad")]        
         public int Cantidad { get; set; }
+
+        [Required(ErrorMessage = "La Cantidad es Requerido")]
+        [Display(Name = "Categoria")]        
+        public IEnumerable<CategoriaListViewModel> categorias { get; set; }
+
+        public CategoriaListViewModel categoria { get; set; }
+
+        public HttpPostedFileBase file { get; set; }
+        public byte[] img { get; set; }
     }
 }

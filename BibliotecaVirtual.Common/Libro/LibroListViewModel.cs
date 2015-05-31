@@ -23,5 +23,8 @@ namespace BibliotecaVirtual.Common.Libro
 
         [Display(Name = "Cantidad")]
         public int cantidad { get; set; }
+
+        [Display(Name="Imagen")]
+        public byte[] img { get; set; }
     }
 }

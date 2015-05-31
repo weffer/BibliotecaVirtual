@@ -12,5 +12,6 @@ namespace BibliotecaVirtual.Dominio
         public Categoria categoria { get; set; }
         public int cantidad { get; set; }
         public int categoriaId { get; set; }
+        public byte[] img { get; set; }
     }
 }

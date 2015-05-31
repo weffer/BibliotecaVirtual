@@ -63,6 +63,14 @@ namespace BibliotecaVirtual.App_Start
                         .BindAllInterfaces()
                     );
 
+                //kernel.Bind(
+                //    o => o.FromAssemblyContaining<CategoriaRepository>()
+                //        .SelectAllClasses()
+                //        .WhichAreNotGeneric()
+                //        .InheritedFrom(typeof(IRepository<>))
+                //        .BindAllInterfaces()
+                //    );
+
                 kernel.Bind<BibliotecaVirtualContext>().ToSelf().InRequestScope();
                 //Configuracion para Identity
                 kernel.Bind<ApplicationDbContext>().ToSelf().InRequestScope();

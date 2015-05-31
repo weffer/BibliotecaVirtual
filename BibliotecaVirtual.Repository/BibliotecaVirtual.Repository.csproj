@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
     <Compile Include="BibliotecaVirtualContext.cs" />
+    <Compile Include="CategoriaRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="LibroRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
