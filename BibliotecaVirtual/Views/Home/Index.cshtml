@@ -5,3 +5,24 @@
 <div class="jumbotron">
     <h1>SISTEMA DE BIBLIOTECA VIRTUAL</h1>    
 </div>
+
+
+<script>
+    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+     {
+         <text>
+    $(function () {
+                debugger;
+                $.ajax({
+                    url: "Home/Alertas",
+                    type:"GET",
+                    data: {},
+                    success: function (data) {
+                        debugger;
+                        toastr.info(data);
+                    }
+                });
+            });       
+         </text>
+     }
+</script>

@@ -34,5 +34,9 @@ namespace BibliotecaVirtual.Services
             return Mapper.Map<IEnumerable<Prestamo>, IEnumerable<PrestamoConsultarViewModel>>(this._prestamoRepository.Get().Where(x => x.Username.ToUpper()==username.ToUpper())).ToList<PrestamoConsultarViewModel>();
         }
 
+        public List<PrestamoConsultarViewModel> GetAll(){
+            return Mapper.Map<IEnumerable<Prestamo>, IEnumerable<PrestamoConsultarViewModel>>(this._prestamoRepository.GetAll()).ToList<PrestamoConsultarViewModel>();
+        }
+
     }
 }
