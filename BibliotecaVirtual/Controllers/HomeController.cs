@@ -43,10 +43,11 @@ namespace BibliotecaVirtual.Controllers
 
             List<PrestamoConsultarViewModel> lista = _PrestamoService.GetAll();
 
-
+            int i=0;
             foreach (var item in lista.Where(x=>x.FechaDevolucion<DateTime.Now).ToList())
 	        {
-                alertas = item.Libro.Titulo + " - " + item.FechaDevolucion.ToString().Substring(0,11)+" la fecha de devolucion ya se éxpiro";
+                i++;
+                alertas = alertas + i.ToString()+"- " +item.Libro.Titulo + " - " + item.FechaDevolucion.ToString().Substring(0,11)+" la fecha de devolucion ya se éxpiro </br>";
 	        }
 
             return Content(alertas);
