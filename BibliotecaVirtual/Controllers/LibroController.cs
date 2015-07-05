@@ -27,8 +27,7 @@ namespace BibliotecaVirtual.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            LibroCreateViewModel model = new LibroCreateViewModel();
-            model.categorias = _LibroService.GetAllCategoria();
+            LibroCreateViewModel model = new LibroCreateViewModel();            
             return View(model);
         }
 
@@ -48,8 +47,7 @@ namespace BibliotecaVirtual.Controllers
 
             byte[] data = new byte[model.file.ContentLength];
             model.file.InputStream.Read(data, 0, model.file.ContentLength);
-            model.img = data;
-            model.categoriaid = model.categoria.Id;
+            model.Imagen = data;            
             
             if (_LibroService.Create(model) > 0)
                 TempData["LibroCreateSuccess"] = "Se Registro Correctamente";

@@ -26,8 +26,8 @@
                 <ul class="nav navbar-nav">
                     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
                     {
-                        <li>@Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")</li>
-                        <li>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</li>
+                        <li>@Html.ActionLink("Roles", "Index", "RolesAdmin")</li>
+                        <li>@Html.ActionLink("Usuarios", "Index", "UsersAdmin")</li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Mantenimiento<b class="caret"></b>
@@ -39,8 +39,8 @@
                     }
                     @if (Request.IsAuthenticated && User.IsInRole("Cliente"))
                     {
-                        <li>@Html.ActionLink("Reserva", "Index", "Reserva")</li>
-                        <li>@Html.ActionLink("Devolucion","Index","Devolucion")</li>
+                        <li>@Html.ActionLink("Prestamo", "Index", "Prestamo")</li>
+                       
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

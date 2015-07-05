@@ -11,28 +11,17 @@ namespace BibliotecaVirtual.Common.Libro
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "El Nombre es Requerido")]
-        [Display(Name = "Nombre")]
-        public string nombre { get; set; }
+        [Required(ErrorMessage = "El Titulo es Requerido")]
+        [Display(Name = "Titulo")]
+        public string Titulo { get; set; }
 
-        [Required(ErrorMessage = "La descripción es Requerido")]
-        [Display(Name = "Descripción")]
-        public string descripcion { get; set; }
+        [Required(ErrorMessage = "El Editorial es Requerido")]
+        [Display(Name = "Editorial")]
+        public string Editorial { get; set; }
 
-        [Required(ErrorMessage = "El Nombre del Autor es Requerido")]
-        [Display(Name = "Nombre de Autor")]
-        public string nombre_autor { get; set; }
-
-        [Required(ErrorMessage = "El genero es Requerido")]
-        [Display(Name = "Genero")]
-        public string genero { get; set; }
-
-        [Required(ErrorMessage = "La Categoria es Requerido")]
-        [Display(Name = "Categoria")]
-        public int categoriaid { get; set; }
-
-        [Required(ErrorMessage = "La Cantidad es Requerido")]
-        [Display(Name = "Cantidad")]
-        public int Cantidad { get; set; }
+        [Required(ErrorMessage = "El Area es Requerido")]
+        [Display(Name = "Area")]
+        public string Area { get; set; }
+       
     }
 }

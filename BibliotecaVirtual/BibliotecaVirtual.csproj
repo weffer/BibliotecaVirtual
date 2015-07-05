@@ -182,7 +182,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\ReservaController.cs" />
+    <Compile Include="Controllers\PrestamoController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\UsersAdminController.cs" />
     <Compile Include="Global.asax.cs">
@@ -202,6 +202,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="DB\BibliotecaVirtual.sql" />
     <Content Include="DB\BibliotecaVirtualSecurity.sql" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1060,7 +1061,9 @@
     <Content Include="Views\Libro\Index.cshtml" />
     <Content Include="Views\Libro\Edit.cshtml" />
     <Content Include="Views\Libro\Details.cshtml" />
-    <Content Include="Views\Reserva\Index.cshtml" />
+    <Content Include="Views\Prestamo\Index.cshtml" />
+    <Content Include="Views\Prestamo\FinalizarPrestamo.cshtml" />
+    <Content Include="Views\Prestamo\Partial\ConsultarLibroPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1093,9 +1096,6 @@
       <Project>{2a315620-6683-44e1-8d9e-4dbe5f0a1f72}</Project>
       <Name>BibliotecaVirtual.Services</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DB\BibliotecaVirtual.sql" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

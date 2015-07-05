@@ -46,8 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LibroService.cs" />
+    <Compile Include="PrestamoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReservaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaVirtual.AutoMapper\BibliotecaVirtual.AutoMapper.csproj">

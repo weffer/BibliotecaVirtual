@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using BibliotecaVirtual.Common.Categoria;
 using BibliotecaVirtual.Common.Libro;
-using BibliotecaVirtual.Common.Reserva;
+using BibliotecaVirtual.Common.Prestamo;
 using BibliotecaVirtual.Dominio;
 using System;
 using System.Collections.Generic;
@@ -25,10 +24,10 @@ namespace BibliotecaVirtual.AutoMapper
             Mapper.CreateMap<Libro, LibroCreateViewModel>();
             Mapper.CreateMap<Libro, LibroListViewModel>();
             Mapper.CreateMap<Libro, LibroEditViewModel>();
-            Mapper.CreateMap<Libro, LibroDetailViewModel>();
-            Mapper.CreateMap<Categoria, CategoriaListViewModel>();
-
-            Mapper.CreateMap<Libro, SearchLibroViewModel>();
+            Mapper.CreateMap<Libro, LibroDetailViewModel>(); 
+           
+            //Prestamo
+            Mapper.CreateMap<Prestamo, PrestamoCreateViewModel>();
         }
     }
 }

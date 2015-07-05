@@ -1,0 +1,95 @@
+﻿@model IEnumerable<BibliotecaVirtual.Common.Libro.LibroListViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Libros</h2>
+
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">Titulo</label>        
+        <div class="col-md-10">
+            <input type="text" id="txtTitulo" class="form-control" placeholder="Ingrese Titulo"/>
+        </div>
+    </div>    
+
+</div>
+
+<br />
+
+<div id="PartialListView">
+    @using (Html.BeginForm("Generar", "Prestamo", FormMethod.Post))
+    {
+        <table class="table">
+            <tr>
+                <td>
+                    @foreach (var item in Model)
+                    {
+                        <div style="display:inline-block;margin:10px 10px 10px 10px;">
+                            <img src="data:image/png;base64,@Convert.ToBase64String(item.Imagen, 0, item.Imagen.Length)" height="250" width="120" />
+                            <br />
+                            <input type="checkbox" name="ids" value="@item.Id" />
+                            <b>@Html.DisplayFor(modelItem => item.Titulo)</b>
+                        </div>
+                    }
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <input type="submit" value="Generar Prestamo" class="btn btn-success" />
+
+    }
+</div>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#txtTitulo').keypress(function (e) {
+                tecla = (document.all) ? e.keyCode : e.which;
+                if (tecla == 13) {
+                    $.ajax({
+                        url: "Prestamo/Consultar",
+                        data: { titulo: $('#txtTitulo').val() },
+                        type: 'GET',
+                        success: function (data) {
+                            $('#PartialListView').html(data);
+                        }
+                    });
+                }
+                
+            });
+            
+
+
+
+            @if (TempData.ContainsKey("PrestamoCreateSuccess"))
+        {
+        <text>
+            $(function () {
+                toastr.success('@TempData["PrestamoCreateSuccess"]');
+                @{TempData.Remove("PrestamoCreateSuccess");}
+            })
+            </text>
+        }
+        else if (TempData.ContainsKey("PrestamoCreateError"))
+        {
+        <text>
+            $(function () {
+                toastr.error('@TempData["PrestamoCreateError"]');
+                @{TempData.Remove("PrestamoCreateError");}
+            })
+            </text>
+        }
+        else if (TempData.ContainsKey("PrestamoSinSeleccionar"))
+        {
+            <text>
+            $(function () {
+                toastr.error('@TempData["PrestamoSinSeleccionar"]');
+                @{TempData.Remove("PrestamoSinSeleccionar");}
+            })
+            </text>
+        }
+        });
+    </script>
