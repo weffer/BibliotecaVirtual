@@ -46,6 +46,7 @@
     <Compile Include="Libro\LibroDetailViewModel.cs" />
     <Compile Include="Libro\LibroEditViewModel.cs" />
     <Compile Include="Libro\LibroListViewModel.cs" />
+    <Compile Include="Prestamo\PrestamoConsultarViewModel.cs" />
     <Compile Include="Prestamo\PrestamoCreateViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

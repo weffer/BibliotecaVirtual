@@ -1,0 +1,48 @@
+﻿@model IEnumerable<BibliotecaVirtual.Common.Prestamo.PrestamoConsultarViewModel>
+
+@{
+    ViewBag.Title = "ConsultarPrestamo";
+}
+
+<h2>ConsultarPrestamo</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaDevolucion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Devuelto)
+        </th>       
+        <th>
+            Libro
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaPrestamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaDevolucion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Devuelto)
+        </td>     
+        <td>
+            @Html.DisplayFor(modelItem => item.Libro.Titulo)
+        </td>   
+    </tr>
+}
+
+</table>

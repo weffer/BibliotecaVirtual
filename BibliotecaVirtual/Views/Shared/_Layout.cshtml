@@ -40,7 +40,8 @@
                     @if (Request.IsAuthenticated && User.IsInRole("Cliente"))
                     {
                         <li>@Html.ActionLink("Prestamo", "Index", "Prestamo")</li>
-                       
+                        <li>@Html.ActionLink("Consultar Prestamo", "ConsultarPrestamo", "Prestamo")</li>
+
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

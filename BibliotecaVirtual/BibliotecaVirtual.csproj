@@ -1064,6 +1064,7 @@
     <Content Include="Views\Prestamo\Index.cshtml" />
     <Content Include="Views\Prestamo\FinalizarPrestamo.cshtml" />
     <Content Include="Views\Prestamo\Partial\ConsultarLibroPartialView.cshtml" />
+    <Content Include="Views\Prestamo\ConsultarPrestamo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -28,6 +28,7 @@ namespace BibliotecaVirtual.AutoMapper
      
             //Prestamo
             Mapper.CreateMap<PrestamoCreateViewModel, Prestamo>();
+            Mapper.CreateMap<PrestamoConsultarViewModel, Prestamo>();
         }
     }
 }

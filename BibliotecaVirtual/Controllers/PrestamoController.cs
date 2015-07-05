@@ -94,5 +94,13 @@ namespace BibliotecaVirtual.Controllers
             IEnumerable<LibroListViewModel> _ListViewModel = _LibroService.GetAll().Where(x=>x.Titulo.ToUpper().Contains(titulo.ToUpper())).AsEnumerable();
             return PartialView("Partial/ConsultarLibroPartialView", _ListViewModel);
         }
+
+
+        public ActionResult ConsultarPrestamo()
+        {
+            List<PrestamoConsultarViewModel> model = this._PrestamoService.ConsultarPrestamos(User.Identity.Name);
+            return View(model);
+        }
+        
     }
 }
